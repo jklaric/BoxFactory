@@ -1,0 +1,45 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/box-project/dist
+/box-project/tmp
+/box-project/out-tsc
+/box-project/bazel-out
+
+# Node
+/box-project/node_modules
+/box-project/npm-debug.log
+/box-project/yarn-error.log
+
+# IDEs and editors
+/box-project/.idea/
+/box-project/.project
+/box-project/.classpath
+/box-project.c9/
+/box-project*.launch
+/box-project/.settings/
+/box-project/*.sublime-workspace
+
+# Visual Studio Code
+/box-project/.vscode/*
+/box-project/!.vscode/settings.json
+/box-project/!.vscode/tasks.json
+/box-project/!.vscode/launch.json
+/box-project/!.vscode/extensions.json
+/box-project/.history/*
+
+# Miscellaneous
+/box-project/.angular/cache
+/box-project/.sass-cache/
+/box-project/connect.lock
+/box-project/coverage
+/box-project/libpeerconnection.log
+/box-project/testem.log
+/box-project/typings
+
+# System files
+/box-project/.DS_Store
+/box-project/Thumbs.db
+
+backEnd/obj
+backEnd/bin
