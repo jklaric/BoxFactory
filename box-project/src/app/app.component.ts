@@ -1,24 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'box-project';
-  items = [
-    {
-      name: 'Item 1',
-      description: 'Description of Item 1',
-      price: 10.99,
-      imageUrl: 'https://example.com/item1.jpg',
-    },
-    {
-      name: 'Item 2',
-      description: 'Description of Item 2',
-      price: 19.99,
-      imageUrl: 'https://example.com/item2.jpg',
-    },
-  ];
+  items: any[] = [];
+
+  constructor(private httpClient: HttpClient) {}
+
+  ngOnInit() {
+    const apiUrl = 'http://localhost:5035/testdb';
+
+    this.httpClient.get(apiUrl).subscribe((data: any) => {
+      this.items = data;
+    });
+  }
 }
+
