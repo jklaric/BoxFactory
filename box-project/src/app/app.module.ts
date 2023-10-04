@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 
@@ -10,7 +10,8 @@ import { IonicModule } from '@ionic/angular';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
       <ion-title>
-        Items for Sale
+        Boxes for Sale
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -10,12 +10,11 @@
     <ion-list>
       <ion-item *ngFor="let item of items">
         <ion-thumbnail slot="start">
-          <img [src]="item.imageUrl" alt="Item Image">
+          <img src="https://media.kitepackaging.co.uk/images/product/large/7x7x7l.jpg" alt="Item Image">
         </ion-thumbnail>
         <ion-label>
-          <h2>{{ item.name }}</h2>
-          <p>{{ item.description }}</p>
-          <p>Price: ${{ item.price }}</p>
+          <h2>{{ item.height + "x" + item.width + "x" + item.length }}</h2>
+          <p>{{ "In stock = " + item.amount }}</p>
         </ion-label>
       </ion-item>
     </ion-list>
