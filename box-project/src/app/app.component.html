@@ -1,22 +1,38 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>
-        Boxes for Sale
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Boxes for Sale
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addBox()">
+        Add Box
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="filterItems()"></ion-searchbar>
   
-  <ion-content>
-    <ion-list>
-      <ion-item *ngFor="let item of items">
-        <ion-thumbnail slot="start">
-          <img src="https://media.kitepackaging.co.uk/images/product/large/7x7x7l.jpg" alt="Item Image">
-        </ion-thumbnail>
-        <ion-label>
-          <h2>{{ item.height + "x" + item.width + "x" + item.length }}</h2>
-          <p>{{ "In stock = " + item.amount }}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-  
+  <ion-list *ngIf="filteredItems.length > 0">
+    <ion-item *ngFor="let item of filteredItems; let i = index">
+      <ion-thumbnail slot="start">
+        <img src="https://media.kitepackaging.co.uk/images/product/large/7x7x7l.jpg"  alt="Item Image">
+      </ion-thumbnail>
+      <ion-label>
+        <h1>{{item.type}}</h1>
+        <h2>{{ item.height + 'x' + item.width + 'x' + item.length }}</h2>
+        <p>In stock = {{ item.amount }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="editBox(i)">Edit</ion-button>
+        <ion-button (click)="deleteBox(i)">Delete</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="filteredItems.length === 0">
+    <ion-item>
+      No boxes found.
+    </ion-item>
+  </ion-list>
+</ion-content>
