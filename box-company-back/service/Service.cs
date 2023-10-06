@@ -23,4 +23,20 @@ public class Service
             throw new Exception("Could not get boxes");
         }
     }
+
+	public Box CreateBox(int height, int width, int length, string type, int amount)
+	{
+		return _infrastructure.CreateBox(int height, int width, int length, string type, int amount);
+	}
+
+	public Box UpdateBox(int id, int height, int width, int length, string type, int amount)
+	{
+		return _infrastructure.UpdateBox(int height, int width, int length, string type, int amount);
+	}
+	
+	public void  DeleteBox(int id)
+	{
+		var result = _infrastructure.DeleteBox(id);
+	}
+
 }
