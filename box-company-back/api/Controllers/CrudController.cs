@@ -20,4 +20,11 @@ public class CrudController : ControllerBase
         {
             return _service.GetAllBoxes();
         }
+        
+        [HttpDelete]
+        [Route("/api/boxes/{boxId}")]
+        public bool Delete([FromRoute] int boxId)
+        {
+            return _service.DeleteBox(boxId);
+        }
 }
