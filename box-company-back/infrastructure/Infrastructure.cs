@@ -25,13 +25,13 @@ public class Infrastructure
     public Box CreateBox(int height, int width, int length, string type, int amount )
     {
         var sql = $@"INSERT INTO Boxes (height, width, length, type, amount)
-                    VALUES (@Height, @Width, @Length, @Type, @Amount)
+                    VALUES (@height, @width, @length, @type, @amount)
                     RETURNING boxID as {nameof(Box.BoxID)},
                                 height as {nameof(Box.Height)},
                                 width as {nameof(Box.Width)},
                                 length as {nameof(Box.Length)},
                                 type as {nameof(Box.Type)},
-                                amount as {nameof(Box.Amount)},";
+                                amount as {nameof(Box.Amount)}";
         
         using (var conn = _dataSource.OpenConnection())
         {
@@ -44,12 +44,12 @@ public class Infrastructure
         var sql =
             $@"UPDATE Boxes SET height = @height, width = @width, length = @length, type = @length, amount = @amount
                         WHERE boxID = @id
-                        RETURNING id as {nameof(Box.BoxID)}
+                        RETURNING boxID as {nameof(Box.BoxID)}
                                 height as {nameof(Box.Height)},
                                     width as {nameof(Box.Width)},
                                     length as {nameof(Box.Length)},
                                     type as {nameof(Box.Type)},
-                                    amount as {nameof(Box.Amount)},";
+                                    amount as {nameof(Box.Amount)}";
 
         using (var conn = _dataSource.OpenConnection())
         {
