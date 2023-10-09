@@ -1,4 +1,5 @@
-﻿using box_company_back.models;
+﻿using box_company_back.api.TransferModels;
+using box_company_back.models;
 using box_company_back.service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,9 +16,32 @@ public class CrudController : ControllerBase
     }
         
         [HttpGet]
-        [Route("/testdb")]
+        [Route("/boxes")]
         public IEnumerable<Box> GetBoxes()
         {
             return _service.GetAllBoxes();
+        }
+        
+        [HttpDelete]
+        [Route("/api/boxes/{boxId}")]
+        public bool Delete([FromRoute] int boxId)
+        {
+            return _service.DeleteBox(boxId);
+        }
+        
+        [HttpPost]
+        [Route("/api/boxes/create")]
+        public Box Create([FromBody] BoxDto dto)
+        {
+            return _service.CreateBox(dto.Height, dto.Width, dto.Length, dto.Type, dto.Amount);
+        }
+        
+        [HttpPut]
+        [Route("/api/boxes/{boxId}")]
+        public Box Put(
+            [FromRoute] int boxId,
+            [FromBody] BoxDto dto)
+        {
+            return _service.UpdateBox(boxId, dto.Height, dto.Width, dto.Length, dto.Type, dto.Amount);
         }
 }
