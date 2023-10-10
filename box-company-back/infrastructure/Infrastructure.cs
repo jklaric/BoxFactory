@@ -42,20 +42,21 @@ public class Infrastructure
     public Box UpdateBox(int id, int height, int width, int length, string type, int amount)
     {
         var sql =
-            $@"UPDATE Boxes SET height = @height, width = @width, length = @length, type = @length, amount = @amount
-                        WHERE boxID = @id
-                        RETURNING boxID as {nameof(Box.BoxID)}
-                                height as {nameof(Box.Height)},
-                                    width as {nameof(Box.Width)},
-                                    length as {nameof(Box.Length)},
-                                    type as {nameof(Box.Type)},
-                                    amount as {nameof(Box.Amount)}";
+            $@"UPDATE Boxes SET height = @height, width = @width, length = @length, type = @type, amount = @amount
+                    WHERE boxID = @id
+                    RETURNING boxID as {nameof(Box.BoxID)},
+                            height as {nameof(Box.Height)},
+                            width as {nameof(Box.Width)},
+                            length as {nameof(Box.Length)},
+                            type as {nameof(Box.Type)},
+                            amount as {nameof(Box.Amount)}";
 
         using (var conn = _dataSource.OpenConnection())
         {
             return conn.QueryFirst<Box>(sql, new { id, height, width, length, type, amount });
         }
     }
+
     
     public bool DeleteBox(int id)
     {
