@@ -1,0 +1,47 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: ng build --prod
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1
+
+      - name: Build .NET app
+        run: dotnet build
+
+      - name: Run unit tests
+        run: dotnet test
+
+      - name: Deploy to production (example)
+        env:
+          DOTNET_CLI_TELEMETRY_OPTOUT: 1
+        run: |
+          # Here, deploy to your hosting platform (database).
+          # Replace this step with your deployment process.
+          echo "Deployment step goes here"
