@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import { ModalController } from '@ionic/angular';
 import { AddBoxModalComponent } from './add-box-modal/add-box-modal.component';
 import { EditBoxModalComponent } from './edit-box-modal/edit-box-modal.component';
+import { BoxDetailsModalComponent } from './box-details-modal/box-details-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -116,6 +117,17 @@ export class AppComponent implements OnInit{
 
     await modal.present();
       this.filterItems(); 
+  }
+
+  async openBoxDetailsModal(box: any) {
+    const modal = await this.modalController.create({
+      component: BoxDetailsModalComponent,
+      componentProps: {
+        box: box
+      }
+    });
+
+    await modal.present();
   }
 
 }

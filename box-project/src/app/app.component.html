@@ -15,7 +15,7 @@
   <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="filterItems()"></ion-searchbar>
   
   <ion-list *ngIf="filteredItems.length > 0">
-    <ion-item  *ngFor="let item of filteredItems.slice(0, 50); let i = index">
+    <ion-item  *ngFor="let item of filteredItems.slice(0, 50); let i = index" (click)="openBoxDetailsModal(item)">
       <ion-thumbnail slot="start">
         <img src="https://media.kitepackaging.co.uk/images/product/large/7x7x7l.jpg"  alt="Item Image">
       </ion-thumbnail>
