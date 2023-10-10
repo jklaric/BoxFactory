@@ -6,6 +6,7 @@ public class Utillity
 {
     public static readonly Uri Uri;
     public static readonly string ProperlyFormattedConnectionString;
+    public static readonly NpgsqlDataSource DataSource;
 
     static Utillity()
     {
@@ -28,12 +29,55 @@ public class Utillity
                 Uri.UserInfo.Split(':')[0],
                 Uri.UserInfo.Split(':')[1],
                 Uri.Port > 0 ? Uri.Port : 5432);
-            new NpgsqlDataSourceBuilder(ProperlyFormattedConnectionString).Build().OpenConnection().Close();
+            DataSource = 
+                new NpgsqlDataSourceBuilder(ProperlyFormattedConnectionString).Build();
+                DataSource.OpenConnection().Close();
         }
         catch (Exception e)
         {
             throw new Exception($@"Connection string is found but cannot be used.", e);
         }
     }
+    
+    public static string BadResponse(string content)
+    {
+        return $@"An issue occured while fetching the response body from the API and turning it into a class object.
+        Reponse Body: {content}
+
+        EXCEPTION:
+        ";
+    }
+
+    public static void TriggerRebuild()
+    {
+        using (var conn = DataSource.OpenConnection())
+        {
+            try
+            {
+                conn.Execute(RebuildScript);
+            }
+            catch (Exception e)
+            {
+                throw new Exception($@"An error occured while rebuilding the DB. EXCEPTION:", e);
+            }
+        }
+    }
+
+    public static string RebuildScript = @"
+DROP SCHEMA IF EXISTS Boxes CASCADE;
+CREATE SCHEMA Boxes;
+
+Create Table if not exists Boxes (
+boxID int,
+height int,
+width int,
+length int,
+type varchar(255),
+amount int
+);";
+    
+    public static string NoResponseMessage = $@"
+There was no response from the API, the API may not be running.
+    ";
 
 }

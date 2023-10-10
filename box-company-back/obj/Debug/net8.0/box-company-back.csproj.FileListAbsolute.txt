@@ -165,3 +165,19 @@ C:\Users\klari\OneDrive\Radna površina\working version\BoxFactory\box-company-b
 C:\Users\klari\OneDrive\Radna površina\working version\BoxFactory\box-company-back\obj\Debug\net8.0\box-company-back.pdb
 C:\Users\klari\OneDrive\Radna površina\working version\BoxFactory\box-company-back\obj\Debug\net8.0\box-company-back.genruntimeconfig.cache
 C:\Users\klari\OneDrive\Radna površina\working version\BoxFactory\box-company-back\obj\Debug\net8.0\ref\box-company-back.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Dapper.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Npgsql.DependencyInjection.dll
+C:\Users\Bruger\Desktop\BoxFactory\box-company-back\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
