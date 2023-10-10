@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Box Details
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="dismissModal()">
+          Close
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item>
+      <ion-label position="stacked">Height</ion-label>
+      <ion-input type="text" value="{{ box.height }}" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Width</ion-label>
+      <ion-input type="text" value="{{ box.width }}" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Length</ion-label>
+      <ion-input type="text" value="{{ box.length }}" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Type</ion-label>
+      <ion-input type="text" value="{{ box.type }}" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">In Stock</ion-label>
+        <ion-input type="text" value="{{ box.amount }}" readonly></ion-input>
+    </ion-item>
+  </ion-content>
+  

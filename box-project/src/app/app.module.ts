@@ -6,12 +6,14 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { AddBoxModalComponent } from './add-box-modal/add-box-modal.component';
 import { EditBoxModalComponent } from './edit-box-modal/edit-box-modal.component';
+import { BoxDetailsModalComponent } from './box-details-modal/box-details-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddBoxModalComponent,
-    EditBoxModalComponent
+    EditBoxModalComponent,
+    BoxDetailsModalComponent
   ],
   imports: [
     BrowserModule,
