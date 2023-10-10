@@ -4,28 +4,27 @@
       Boxes for Sale
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="addBox()">
+      <ion-button (click)="toggleAddForm()">
         Add Box
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content style="height: calc(100vh - 50px);">
   <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="filterItems()"></ion-searchbar>
   
   <ion-list *ngIf="filteredItems.length > 0">
-    <ion-item *ngFor="let item of filteredItems; let i = index">
+    <ion-item  *ngFor="let item of filteredItems.slice(0, 50); let i = index">
       <ion-thumbnail slot="start">
         <img src="https://media.kitepackaging.co.uk/images/product/large/7x7x7l.jpg"  alt="Item Image">
       </ion-thumbnail>
       <ion-label>
         <h1>{{item.type}}</h1>
         <h2>{{ item.height + 'x' + item.width + 'x' + item.length }}</h2>
-        <p>In stock = {{ item.amount }}</p>
       </ion-label>
       <ion-buttons slot="end">
-        <ion-button (click)="editBox(i)">Edit</ion-button>
+        <ion-button (click)="openEditBoxModal(item, i)">Edit</ion-button>
         <ion-button (click)="deleteBox(i)">Delete</ion-button>
       </ion-buttons>
     </ion-item>
