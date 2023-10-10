@@ -16,14 +16,14 @@ public class CrudController : ControllerBase
     }
         
         [HttpGet]
-        [Route("/boxes")]
+        [Route("/api/boxes")]
         public IEnumerable<Box> GetBoxes()
         {
             return _service.GetAllBoxes();
         }
         
         [HttpDelete]
-        [Route("/api/boxes/{boxId}")]
+        [Route("/api/boxes/delete/{boxId}")]
         public bool Delete([FromRoute] int boxId)
         {
             return _service.DeleteBox(boxId);
@@ -37,7 +37,7 @@ public class CrudController : ControllerBase
         }
         
         [HttpPut]
-        [Route("/api/boxes/{boxId}")]
+        [Route("/api/boxes/update/{boxId}")]
         public Box Put(
             [FromRoute] int boxId,
             [FromBody] BoxDto dto)
