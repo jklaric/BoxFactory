@@ -11,9 +11,12 @@
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0-preview.7.23375.9" />
+    <PackageReference Include="Microsoft.Playwright" Version="1.38.0" />
+    <PackageReference Include="Microsoft.Playwright.NUnit" Version="1.38.0" />
     <PackageReference Include="Npgsql" Version="8.0.0-preview.4" />
     <PackageReference Include="Npgsql.DependencyInjection" Version="8.0.0-preview.4" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0-rc.1" />
+    <PackageReference Include="NUnit" Version="4.0.0-beta.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
