@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace Tests
         {
             _baseUri = "http://localhost:5035";
             _httpClient = new HttpClient();
+            Process.Start("");
         }
 
         [TearDown]

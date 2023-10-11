@@ -1,0 +1,37 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when changes are pushed to the main branch
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest  # Use the latest version of Ubuntu as the runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # Check out repository's code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14  # Use Node.js V ?
+
+      - name: Install dependencies
+        run: npm install  # Install project dependencies
+
+      - name: Build Angular app
+        run: npm run build -- --prod  # Build Angular application with production settings
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1
+
+      - name: Build .NET app
+        run: dotnet build
+
+      - name: Run unit tests
+        run: dotnet test  # Run unit tests (adjust this based on your testing framework)
+
