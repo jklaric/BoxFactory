@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\box-company-back.csproj": {}
+    "C:\\Users\\abual\\OneDrive\\Skrivebord\\BoxFactory\\box-company-back\\box-company-back.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\box-company-back.csproj": {
+    "C:\\Users\\abual\\OneDrive\\Skrivebord\\BoxFactory\\box-company-back\\box-company-back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\box-company-back.csproj",
+        "projectUniqueName": "C:\\Users\\abual\\OneDrive\\Skrivebord\\BoxFactory\\box-company-back\\box-company-back.csproj",
         "projectName": "box-company-back",
-        "projectPath": "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\box-company-back.csproj",
-        "packagesPath": "C:\\Users\\klari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\obj\\",
+        "projectPath": "C:\\Users\\abual\\OneDrive\\Skrivebord\\BoxFactory\\box-company-back\\box-company-back.csproj",
+        "packagesPath": "C:\\Users\\abual\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\abual\\OneDrive\\Skrivebord\\BoxFactory\\box-company-back\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\klari\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\abual\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,6 +54,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.0-preview.7.23375.9, )"
+            },
+            "Microsoft.Playwright": {
+              "target": "Package",
+              "version": "[1.38.0, )"
             },
             "Npgsql": {
               "target": "Package",
