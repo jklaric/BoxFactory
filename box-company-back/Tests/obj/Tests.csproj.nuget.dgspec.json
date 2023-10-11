@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klari\\OneDrive\\Radna površina\\test\\BoxFactory\\box-company-back\\Tests\\Tests.csproj": {}
+    "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klari\\OneDrive\\Radna površina\\test\\BoxFactory\\box-company-back\\Tests\\Tests.csproj": {
+    "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klari\\OneDrive\\Radna površina\\test\\BoxFactory\\box-company-back\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "C:\\Users\\klari\\OneDrive\\Radna površina\\test\\BoxFactory\\box-company-back\\Tests\\Tests.csproj",
+        "projectPath": "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\klari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klari\\OneDrive\\Radna površina\\test\\BoxFactory\\box-company-back\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\klari\\AppData\\Roaming\\NuGet\\NuGet.Config"

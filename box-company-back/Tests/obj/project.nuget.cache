@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xmqCv5fMfCha138hWlIPKWs8KWH7d4Kw70XH2n2jCIJmhhn7CbjxmvaJs7nOUNlbMm53vQW1taSRC/MDVsL/IQ==",
+  "dgSpecHash": "+zL9ZAsxkXr82bueydXCAU4dtoK7wwedWvy+YvbaNMdj2VSvlS6oyXfK2PMAmxGa6/ZMLWVB3xEvXDLGZflVFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\klari\\OneDrive\\Radna površina\\test\\BoxFactory\\box-company-back\\Tests\\Tests.csproj",
+  "projectFilePath": "C:\\Users\\klari\\OneDrive\\Radna površina\\BoxFactory\\box-company-back\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\klari\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\klari\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

@@ -19,7 +19,7 @@ namespace Tests
         {
             _baseUri = "http://localhost:5035";
             _httpClient = new HttpClient();
-            Process.Start("");
+  
         }
 
         [TearDown]
