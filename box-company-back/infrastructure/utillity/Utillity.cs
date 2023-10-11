@@ -80,4 +80,11 @@ amount int
 There was no response from the API, the API may not be running.
     ";
 
+ 	public static string MyBecause(object actual, object expected)
+    {
+        string expectedJson = JsonConvert.SerializeObject(expected, Formatting.Indented);
+        string actualJson = JsonConvert.SerializeObject(actual, Formatting.Indented);
+
+        return $"because we want these objects to be equivalent:\nExpected:\n{expectedJson}\nActual:\n{actualJson}";
+    }
 }

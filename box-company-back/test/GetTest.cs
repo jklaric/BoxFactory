@@ -57,5 +57,11 @@ public class GetTest
         {
             throw new Exception(Utillity.BadResponseBody(await response.Content.ReadAsStringAsync()), e);
         }
-    }
+ 		using (new AssertionScope())
+        {
+            foreach (var box in boxes)
+            {
+                box.Id.Should().BeGreaterThan(0);
+            }
+   	 }
 }

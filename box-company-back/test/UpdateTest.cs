@@ -1,9 +1,4 @@
-﻿using Dapper;
-using FluentAssertions;
-using FluentAssertions.Execution;
-using NUnit.Framework;
-
-namespace test;
+﻿namespace test;
 
 public class UpdateTest
 {
@@ -14,12 +9,12 @@ public class UpdateTest
     {
         _httpClient = new HttpClient();
     }
-    
+
     [Test]
-    public async Task FindBoxTest()
+    public async Task SuccessFullyUpdateBox()
     {
         Utillity.TriggerRebuild();
-        
+
         var box = new Box()
         {
             Id = 1,
@@ -30,33 +25,28 @@ public class UpdateTest
             Amount = 1,
         };
         
-        var sql =
-            $@"insert into Boxes(weight, width, length, type, amount) VALUES (@weight, @width, @length, @type, @amount)";
+        var sql = $@"insert into Boxes(weight, width, length, type, amount) VALUES (@weight, @width, @length, @type, @amount)";
         using (var conn = Utillity.DataSource.OpenConnection())
         {
             conn.Execute(sql, box);
         }
 
-        var url = 'http://localhost:5035/api/boxes/1';
-        HttpResponseMessage response;
+        var url = 'http://localhost:5035/api/boxes/' + 1;
+
+        HttpResponsMessage response;
         try
         {
-            response = await _httpClient.DeleteAsync(url);
+            response = await _httpClient.PutAsJsonAsync(url, box);
             TestContext.WriteLine("FULL BODY RESPONSE: " + await response.Content.ReadAsStringAsync());
         }
         catch (Exception e)
         {
             throw new Exception(Utillity.NoResponseMessage, e);
         }
-        
         using (new AssertionScope())
         {
-            using (var conn = Utillity.DataSource.OpenConnection())
-            {
-                (conn.ExecuteScalar<int>($"SELECT COUNT(*) FROM Boxes WHERE Id = 1;") == 0).Should()
-                    .BeTrue();
-            }
-
             response.IsSuccessStatusCode.Should().BeTrue();
+            responseObject.Should().BeEquivalentTo(box, Utillity.MyBecause(responseObject, box));
+        }
     }
 }
