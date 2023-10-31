@@ -41,5 +41,5 @@
 /box-project/.DS_Store
 /box-project/Thumbs.db
 
-backEnd/obj
-backEnd/bin
+/box-company-back/obj
+/box-company-back/bin
